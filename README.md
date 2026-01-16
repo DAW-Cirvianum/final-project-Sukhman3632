@@ -67,7 +67,7 @@ DB_PASSWORD=           # La teva contrasenya (deixar buit si no tens)
 Executar migracions i seeders (això crearà les taules i dades de prova automàticament):
 ```bash
 php artisan key:generate
-php artisan migrate --seed
+php artisan migrate:fresh --seed
 php artisan serve
 ```
 
