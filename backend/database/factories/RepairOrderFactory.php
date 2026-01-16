@@ -31,8 +31,9 @@ class RepairOrderFactory extends Factory
                 'Complete vehicle inspection. Replace windshield wipers.',
             ]),
             'status' => fake()->randomElement(['open', 'closed']),
-            'km' => fake()->numberBetween(10000, 350000),
-            'total_cost' => fake()->randomFloat(2, 50, 2000),
+            'start_date' => fake()->dateTimeBetween('-6 months', 'now')->format('Y-m-d'),
+            'end_date' => fake()->optional()->dateTimeBetween('now', '+1 month')->format('Y-m-d'),
+            'final_cost' => fake()->randomFloat(2, 50, 2000),
         ];
     }
 }
