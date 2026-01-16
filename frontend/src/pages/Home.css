@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  height: 100vh;
+  background: linear-gradient(180deg, #f7f9fc 0%, #e8f0fe 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.header-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-login {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.btn-login:hover {
+  background: rgba(30, 58, 138, 0.05);
+}
+
+.btn-register {
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 24px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.btn-register:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.home-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px;
+}
+
+.content-center {
+  text-align: center;
+  max-width: 700px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.content-center h1 {
+  font-size: 56px;
+  font-weight: 600;
+  color: #1e3a8a;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.content-center p {
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 968px) {
+  .home-header { padding: 16px 30px; }
+  .home-main { padding: 30px; }
+  .content-center h1 { font-size: 40px; }
+  .content-center p { font-size: 16px; }
+}
+
+@media (max-width: 640px) {
+  .content-center h1 { font-size: 32px; }
+  .header-right { gap: 8px; }
+  .btn-login, .btn-register { padding: 8px 16px; font-size: 14px; }
+}
